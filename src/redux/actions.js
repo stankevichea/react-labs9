@@ -8,11 +8,11 @@ export const employeesLoaded = (employees) => {
     }
   };
 }
-export const employeesCreated = (employees) => {
+export const employeesCreated = (employee) => {
   return {
     type: EMPLOYEES_CREATED,
     payload: {
-      employees
+      employee
     }
   };
 }

@@ -14,9 +14,10 @@ const appReducer = (state = initialState, action) => {
       return Object.assign({}, state, { employees });
     }
     case EMPLOYEES_CREATED: {
-      const { newemp } = action.payload;
-      const newemps = [...state.employees, newemp];
-      return Object.assign({}, state, { employees: newemps });
+   
+      const newEmployee = action.payload;
+      const newEmployees = [...state.employees, newEmployee];
+      return Object.assign({}, state, { employees: newEmployees });
     }
     default:
         return state

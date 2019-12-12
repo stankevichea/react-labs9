@@ -15,6 +15,7 @@ class PageEmployeeCreate extends React.Component {
     this.createEmployee = this.createEmployee.bind(this);
 
     this.state = {
+      id: Date.now(),
       name: '',
       age: 18,
       company: '',
@@ -43,7 +44,8 @@ class PageEmployeeCreate extends React.Component {
   createEmployee() {
     this.setState({ isSaving: true, error: null });
     
-    const { 
+    const {
+     
       name,
       age, 
       company, 
@@ -69,7 +71,7 @@ class PageEmployeeCreate extends React.Component {
       if(res.status !== 201) {
         this.setState({ isSaving: false, error: `Saving returned status ${res.status}`})
       } else {
-
+        this.props.employeesCreated(employee);
         this.props.history.push("/");
       }
     })  
