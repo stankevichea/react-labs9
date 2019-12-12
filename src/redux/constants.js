@@ -1,1 +1,2 @@
 export const EMPLOYEES_LOADED = 'Employees/EMPLOYEES_LOADED';
+export const EMPLOYEES_CREATED = 'Employees/EMPLOYEES_CREATED';
