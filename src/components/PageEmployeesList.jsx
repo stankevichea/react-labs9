@@ -17,6 +17,12 @@ class PageEmployeesList extends React.Component {
   }
 
   componentDidMount() {
+    if (this.props.was_in_the_list === true) {
+       console.log(employees);
+       console.log("yes");
+      return;
+    }
+    console.log("no");
     this.setState({ isLoading: true });
     fetch('http://localhost:3004/employees')
     .then((data) => data.json())
@@ -52,7 +58,8 @@ class PageEmployeesList extends React.Component {
 
 const mapStateToProps = (state /*, ownProps*/) => {
   return {
-    employees: state.employees
+    employees: state.employees,
+    was_in_the_list:state.was_in_the_list
   }
 }
 
