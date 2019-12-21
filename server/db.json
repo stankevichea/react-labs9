@@ -1,4 +1,10 @@
 {
+  "users": [
+    {
+      "username": "john",
+      "full_name": "John Doe"
+    }
+  ],
   "employees": [
     {
       "_id": "5dc9bdc63d783442fbd22b38",
@@ -249,6 +255,20 @@
       "age": 18,
       "company": "ytututy",
       "email": "ostankevichea@gmail.com"
+    },
+    {
+      "id": 1576934971151,
+      "name": "rwerew",
+      "age": 18,
+      "company": "rewrwe",
+      "email": "rewrew"
+    },
+    {
+      "id": 1576935004408,
+      "name": "bcvbcv",
+      "age": 18,
+      "company": "bvc",
+      "email": "bvc"
     }
   ]
 }

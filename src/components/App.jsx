@@ -13,6 +13,7 @@ import thunk from "redux-thunk";
 
 import PageEmployeesList from './PageEmployeesList';
 import PageEmployeeCreate from './PageEmployeeCreate';
+import PageEmployeesLogin from './PageEmployeesLogin';
 
 
 
@@ -23,7 +24,10 @@ const App = () => (
   <Provider store={store}>
     <Router>
       <Switch>
-        <Route exact path="/">
+      <Route exact path="/">
+          <PageEmployeesLogin></PageEmployeesLogin>
+        </Route>
+        <Route exact path="/list">
           <PageEmployeesList></PageEmployeesList>
         </Route>
         <Route exact path="/new">
