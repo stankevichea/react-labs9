@@ -2,3 +2,4 @@ export const EMPLOYEES_LOADED = 'Employees/EMPLOYEES_LOADED';
 export const EMPLOYEES_CREATED = 'Employees/EMPLOYEES_CREATED';
 export const EMPLOYEES_BEFORE_LOAD = 'Employees/EMPLOYEES_BEFORE_LOAD';
 export const EMPLOYEES_LOAD_ERROR = 'Employees/EMPLOYEES_LOAD_ERROR';
+export const SAVE_USER = 'Users/SAVE_USER';

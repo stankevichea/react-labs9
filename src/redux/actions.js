@@ -1,4 +1,4 @@
-import { EMPLOYEES_LOADED,EMPLOYEES_CREATED,EMPLOYEES_BEFORE_LOAD,EMPLOYEES_LOAD_ERROR } from './constants';
+import { EMPLOYEES_LOADED,EMPLOYEES_CREATED,EMPLOYEES_BEFORE_LOAD,EMPLOYEES_LOAD_ERROR ,SAVE_USER} from './constants';
 
 export const employeesLoaded = (employees) => {
   return {
@@ -16,6 +16,14 @@ export const employeesCreated = (employee) => {
     }
   };
 }
+export const save_user_in_the_store = (user) => {
+  return {
+    type: SAVE_USER,
+    payload:{
+      user
+    }
+  }
+};
 export const employeesbeforeLoad = () => {
   return {
     type: EMPLOYEES_BEFORE_LOAD,

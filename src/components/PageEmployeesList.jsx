@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { withRouter } from "react-router-dom";
 import { fetchEmployees } from "../redux/actions";
 
 
@@ -18,8 +19,10 @@ class PageEmployeesList extends React.Component {
   }
 
   render() {
+    const { user } = this.props;
     const { isLoading } = this.props;
     const { employees } = this.props;
+
 
     if(isLoading) {
       return <p>Loading ...</p>
@@ -27,6 +30,9 @@ class PageEmployeesList extends React.Component {
     
     return (
       <div>
+         <div style={{position: "absolute", top: 0,right: 0, width: "200px", textAlign:'right'}}>
+        <h1> {user!=null?user.full_name:""}</h1>
+  </div>
         <h1>Employees List:</h1>
         {console.log(employees)}
         {employees && employees.map((employee =>  <EmployeeLine   key={employee.id } employee={employee} />))}
@@ -42,7 +48,8 @@ const mapStateToProps = (state /*, ownProps*/) => {
   return {
     employees: state.employees,
     was_in_the_list:state.was_in_the_list,
-    isLoading: state.isLoading
+    isLoading: state.isLoading,
+    user: state.user
   }
 }
 
